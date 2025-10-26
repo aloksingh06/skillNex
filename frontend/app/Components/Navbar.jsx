@@ -5,7 +5,7 @@ export default function Navbar() {
     <nav className="flex w-[90%] justify-between items-center px-8 py-4 backdrop-blur-lgborder-b border-white/10 shadow-md">
       {/* Logo */}
       <div className="text-2xl font-bold text-sky-400 cursor-pointer">
-        SkillPathAI
+        SkillNex
       </div>
 
       {/* Right Section */}
