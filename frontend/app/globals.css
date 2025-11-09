@@ -2,19 +2,19 @@
 
 .gradient-bg {
   height: 100vh;
-  background: linear-gradient(-45deg, #041450, #000217, #000217, #001255);
+  background: linear-gradient(-45deg, #041450, #041450, #000217, #000217);
   background-size: 200% 200%;
   animation: gradientShift 10s ease infinite;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
+/* 
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
-}
+} */
 
 .glass-card {
   backdrop-filter: blur(20px);
@@ -24,3 +24,70 @@
   text-align: center;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
+
+
+
+/* @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"); */
+
+:root {
+  --color-primary: #137fec;
+  --background-light: #f6f7f8;
+  --background-dark: #101922;
+  --surface-light: #ffffff;
+  --surface-dark: #1f2937;
+  --text-light: #111827;
+  --text-dark: #e5e7eb;
+  --subtle-light: #6b7280;
+  --subtle-dark: #9ca3af;
+  --border-light: #d1d5db;
+  --border-dark: #4b5563;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+/* Tailwind color mapping */
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.text-primary {
+  color: var(--color-primary);
+}
+
+.bg-background-light {
+  background-color: var(--background-light);
+}
+.bg-background-dark {
+  background-color: var(--background-dark);
+}
+
+.bg-surface-light {
+  background-color: var(--surface-light);
+}
+.bg-surface-dark {
+  background-color: var(--surface-dark);
+}
+
+.text-text-light {
+  color: var(--text-light);
+}
+.text-text-dark {
+  color: var(--text-dark);
+}
+
+.text-subtle-light {
+  color: var(--subtle-light);
+}
+.text-subtle-dark {
+  color: var(--subtle-dark);
+}
+
+.border-border-light {
+  border-color: var(--border-light);
+}
+.border-border-dark {
+  border-color: var(--border-dark);
+}
+
