@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar({profile}) {
   // temporary login state (replace with real auth logic later)
@@ -17,38 +18,34 @@ export default function Navbar({profile}) {
   return (
     <nav className="flex w-full justify-between items-center px-28 py-4 backdrop-blur-lg border-b border-white/10 shadow-md">
       {/* Logo */}
-      <div className="text-2xl font-bold text-sky-400 cursor-pointer">
+      <Link href="/" className="text-2xl font-bold text-sky-400 cursor-pointer">
         SkillNex
-      </div>
+      </Link>
 
       {/* Right Section */}
       <div className="flex items-center gap-6">
         {/* Conditional Navigation */}
         {!isLoggedIn ? (
           <>
-            <a href="#" className="hover:text-sky-400 transition">
+            <Link href="/" className="hover:text-sky-400 transition">
               Home
-            </a>
-            <a href="#" className="hover:text-sky-400 transition">
+            </Link >
+            <Link href="/Login" className="hover:text-sky-400 transition">
               About
-            </a>
-            <a href="#" className="hover:text-sky-400 transition">
+            </Link >
+             <Link href="/" className="hover:text-sky-400 transition">
               Features
-            </a>
-            <a href="#" className="hover:text-sky-400 transition">
-              Contact
-            </a>
+            </Link >
+            <Link href="/Login" className="px-4 py-2 border border-blue-500 rounded-full hover:bg-sky-600 transition">
+              Login
+            </Link >
+            <Link href="/Login" className="px-4 py-2 bg-sky-500 rounded-full hover:bg-sky-600 transition">
+              Sign Up
+            </Link >
+            
 
             {/* Auth Buttons */}
-            <button
-              onClick={() => setIsLoggedIn(true)}
-              className="px-4 py-2 bg-transparent border border-sky-400 rounded-full hover:bg-sky-400 hover:text-white transition"
-            >
-              Login
-            </button>
-            <button className="px-4 py-2 bg-sky-500 rounded-full hover:bg-sky-600 transition">
-              Sign Up
-            </button>
+           
           </>
         ) : (
           <>
@@ -66,16 +63,16 @@ export default function Navbar({profile}) {
             </a>
 
             {/* Profile Section */}
-            <div className="flex items-center gap-3 cursor-pointer">
+            <Link href="/Profile" className="flex items-center gap-3 cursor-pointer">
               
               <Image
-                src="/profile.jpg"
+                src="/mypic1.jpeg"
                 alt="Profile"
                 width={36}
                 height={36}
                 className="rounded-full border border-sky-400"
               />
-            </div>
+            </Link>
 
             {/* Logout Button */}
            

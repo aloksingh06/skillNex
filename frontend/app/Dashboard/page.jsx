@@ -64,7 +64,7 @@ export default function DashboardPage() {
             description="Get personalized roadmaps and course recommendations to learn new skills and close any gaps."
             buttonText="Explore Paths"
             buttonIcon={<FaSitemap />}
-            href="/LearningPath"
+            href="/Onboarding"
           />
         </section>
 
